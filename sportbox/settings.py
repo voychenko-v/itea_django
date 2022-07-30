@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'sportbox.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sportbox_db',
-        'PORT': '5432',
-        'USER': os.getenv('USER_SPORTBOX_DB'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': 'localhost'
+        'NAME': os.getenv('DB_NAME'),
+        'PORT': os.getenv('DB_PORT'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
     }
 }
 
